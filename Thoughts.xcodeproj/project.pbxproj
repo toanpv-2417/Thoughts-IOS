@@ -15,6 +15,9 @@
 		AC3A98622885CDE100C8ED6D /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3A98612885CDE100C8ED6D /* GameController.framework */; };
 		AC7445EB2889BE0A0089BAA8 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7445EA2889BE0A0089BAA8 /* APICaller.swift */; };
 		ACBD1F08288870B900B651E0 /* HeroHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD1F07288870B900B651E0 /* HeroHeader.swift */; };
+		CB63ABD0288A7DC40091371D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63ABCF288A7DC40091371D /* Movie.swift */; };
+		CB63ABD3288A926D0091371D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63ABD2288A926D0091371D /* Extensions.swift */; };
+		CB63ABD5288A99D80091371D /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63ABD4288A99D80091371D /* Tv.swift */; };
 		CBAFBC0D2887E89B005BE118 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAFBC0C2887E89B005BE118 /* MainTabBarViewController.swift */; };
 		CBAFBC0F2887E8BF005BE118 /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAFBC0E2887E8BF005BE118 /* UpComingViewController.swift */; };
 		CBAFBC112887E8EB005BE118 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAFBC102887E8EB005BE118 /* SearchViewController.swift */; };
@@ -31,8 +34,11 @@
 		AC3A98562885CD0900C8ED6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC3A98582885CD0900C8ED6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3A98612885CDE100C8ED6D /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
-		AC7445EA2889BE0A0089BAA8 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICaller.swift; path = Thoughts/Views/APICaller.swift; sourceTree = SOURCE_ROOT; };
+		AC7445EA2889BE0A0089BAA8 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICaller.swift; path = Thoughts/Managers/APICaller.swift; sourceTree = SOURCE_ROOT; };
 		ACBD1F07288870B900B651E0 /* HeroHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeader.swift; sourceTree = "<group>"; };
+		CB63ABCF288A7DC40091371D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010Movie.swift"; sourceTree = "<group>"; };
+		CB63ABD2288A926D0091371D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CB63ABD4288A99D80091371D /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 		CBAFBC0C2887E89B005BE118 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		CBAFBC0E2887E8BF005BE118 /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
 		CBAFBC102887E8EB005BE118 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,8 @@
 		AC3A98492885CD0700C8ED6D /* Thoughts */ = {
 			isa = PBXGroup;
 			children = (
+				CB63ABD1288A92540091371D /* Resources */,
+				CB63ABCE288A7D550091371D /* Managers */,
 				CBE54DE828868C3800BCBFB1 /* Other */,
 				CBE54DE428868C1A00BCBFB1 /* Models */,
 				CBE54DE528868C2300BCBFB1 /* ViewModels */,
@@ -91,10 +99,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBE54DE428868C1A00BCBFB1 /* Models */ = {
+		CB63ABCE288A7D550091371D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				AC7445EA2889BE0A0089BAA8 /* APICaller.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CB63ABD1288A92540091371D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB63ABD2288A926D0091371D /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBE54DE428868C1A00BCBFB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB63ABCF288A7DC40091371D /* Movie.swift */,
+				CB63ABD4288A99D80091371D /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,13 +236,16 @@
 			files = (
 				CBAFBC112887E8EB005BE118 /* SearchViewController.swift in Sources */,
 				AC3A984F2885CD0700C8ED6D /* HomeViewController.swift in Sources */,
+				CB63ABD0288A7DC40091371D /* Movie.swift in Sources */,
 				CBBC46612887FC7900F3A1D5 /* CollectionViewTableViewCell.swift in Sources */,
 				AC7445EB2889BE0A0089BAA8 /* APICaller.swift in Sources */,
 				CBAFBC142887E938005BE118 /* DownloadsViewController.swift in Sources */,
 				CBAFBC0D2887E89B005BE118 /* MainTabBarViewController.swift in Sources */,
+				CB63ABD3288A926D0091371D /* Extensions.swift in Sources */,
 				CBAFBC0F2887E8BF005BE118 /* UpComingViewController.swift in Sources */,
 				ACBD1F08288870B900B651E0 /* HeroHeader.swift in Sources */,
 				AC3A984B2885CD0700C8ED6D /* AppDelegate.swift in Sources */,
+				CB63ABD5288A99D80091371D /* Tv.swift in Sources */,
 				AC3A984D2885CD0700C8ED6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

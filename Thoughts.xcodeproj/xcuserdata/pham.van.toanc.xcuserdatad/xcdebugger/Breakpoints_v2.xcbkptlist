@@ -3,4 +3,70 @@
    uuid = "41B36F98-79D2-41B8-9676-C6D8811FAF5F"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E25F1B15-4D96-4E05-BDDB-B75683B64EBE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Thoughts/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "getUpcomingMovies(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09923B00-0687-40E4-9B68-86331D4BE083"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Thoughts/Managers/APICaller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "getUpcomingMovies(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09923B00-0687-40E4-9B68-86331D4BE083 - 29ad13b764b24d3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Thoughts.APICaller.getUpcomingMovies(completion: (Swift.Result&lt;Swift.Array&lt;Thoughts.Movie&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Thoughts"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pham.van.toanc/Documents/Github/Thoughts-IOS/Thoughts/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  uuid = "09923B00-0687-40E4-9B68-86331D4BE083 - 29ad13b764b24d3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Thoughts.APICaller.getUpcomingMovies(completion: (Swift.Result&lt;Swift.Array&lt;Thoughts.Movie&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Thoughts"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pham.van.toanc/Documents/Github/Thoughts-IOS/Thoughts/Managers/APICaller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

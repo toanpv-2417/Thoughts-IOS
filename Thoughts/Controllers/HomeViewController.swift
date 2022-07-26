@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TrendingMovies
+    case TrendingTv
+    case Popular
+    case Upcoming
+    case TopRate
+}
+
 class HomeViewController: UIViewController {
     
     let sectionTitles:[String] = ["Trending Movies","Trending TV","UpComing Movies","Top rated"]
@@ -30,7 +38,8 @@ class HomeViewController: UIViewController {
         
         let headerView = HeroHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
-        fetchData()
+        
+//        fetchData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -38,30 +47,15 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    private func fetchData(){
-//        APICaller.shared.getTrendingMovies { results in
-//            switch results {
-//            case .success( let movies ):
-//                print("LOG: \(movies)")
-//            case .failure(let error):
-//                print("LOG: \(error)")
-//            }
-//        }
-        
-//        APICaller.shared.getTrendingTvs { result in
-//
-//        }
-        
-        APICaller.shared.getUpcomingMovies { results in
-            switch results {
+    private func fetchData(){        
+        APICaller.shared.getPopular { result in
+            switch result {
             case .success( let movies ):
-                print("LOG: \(movies)")
+                print("LOG:12 \(movies)")
             case .failure(let error):
-                print("LOG: \(error)")
+                print("LOG:12 \(error)")
             }
         }
-        
-
     }
     
     private func configureNavbar(){
@@ -97,6 +91,63 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
             return UITableViewCell()
         }
         
+    switch indexPath.section {
+        case Sections.TrendingMovies.rawValue:
+                APICaller.shared.getTrendingMovies { results in
+                    switch results {
+                    case .success( let movies ):
+                        cell.configure(with: movies)
+                    case .failure(let error):
+                        print("LOG: \(error)")
+                    }
+                }
+            
+        case Sections.TrendingTv.rawValue:
+            APICaller.shared.getTrendingTvs { results in
+                switch results {
+                case .success( let movies ):
+                    cell.configure(with: movies)
+                case .failure(let error):
+                    print("LOG: \(error)")
+                }
+            }
+        case Sections.Popular.rawValue:
+            APICaller.shared.getPopular { results in
+                switch results {
+                case .success( let movies ):
+                    cell.configure(with: movies)
+                    print("LOG:12 \(movies)")
+
+                case .failure(let error):
+                    print("LOG: \(error)")
+                }
+            }
+        case Sections.Upcoming.rawValue:
+            APICaller.shared.getUpcomingMovies { results in
+                switch results {
+                case .success( let movies ):
+                    cell.configure(with: movies)
+                    print("LOG:12 \(movies)")
+
+                case .failure(let error):
+                    print("LOG: \(error)")
+                }
+            }
+        case Sections.TopRate.rawValue:
+            APICaller.shared.getTopRate { results in
+                switch results {
+                case .success( let movies ):
+                    cell.configure(with: movies)
+                    print("LOG:12 \(movies)")
+
+                case .failure(let error):
+                    print("LOG: \(error)")
+                }
+            }
+        default: break
+        
+    }
+            
         return cell
     }
     

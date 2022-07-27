@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		AC7445EB2889BE0A0089BAA8 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7445EA2889BE0A0089BAA8 /* APICaller.swift */; };
 		ACBD1F08288870B900B651E0 /* HeroHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBD1F07288870B900B651E0 /* HeroHeader.swift */; };
 		ACE011FB28905761003D8EAD /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE011FA28905761003D8EAD /* TitleCollectionViewCell.swift */; };
+		CB4C20C12891242D00030246 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4C20C02891242D00030246 /* TitleTableViewCell.swift */; };
+		CB4C20C3289127C600030246 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4C20C2289127C600030246 /* TitleViewModel.swift */; };
 		CB63ABD0288A7DC40091371D /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63ABCF288A7DC40091371D /* Title.swift */; };
 		CB63ABD3288A926D0091371D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63ABD2288A926D0091371D /* Extensions.swift */; };
 		CBAFBC0D2887E89B005BE118 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAFBC0C2887E89B005BE118 /* MainTabBarViewController.swift */; };
@@ -41,6 +43,8 @@
 		AC7445EA2889BE0A0089BAA8 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICaller.swift; path = Thoughts/Managers/APICaller.swift; sourceTree = SOURCE_ROOT; };
 		ACBD1F07288870B900B651E0 /* HeroHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeader.swift; sourceTree = "<group>"; };
 		ACE011FA28905761003D8EAD /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB4C20C02891242D00030246 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		CB4C20C2289127C600030246 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		CB63ABCF288A7DC40091371D /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010Title.swift"; sourceTree = "<group>"; };
 		CB63ABD2288A926D0091371D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CBAFBC0C2887E89B005BE118 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		CBE54DE528868C2300BCBFB1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CB4C20C2289127C600030246 /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				CBBC46602887FC7900F3A1D5 /* CollectionViewTableViewCell.swift */,
 				ACBD1F07288870B900B651E0 /* HeroHeader.swift */,
 				ACE011FA28905761003D8EAD /* TitleCollectionViewCell.swift */,
+				CB4C20C02891242D00030246 /* TitleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,7 +181,6 @@
 				A48D11D8B320222F80F1CE8E /* Pods-Thoughts.debug.xcconfig */,
 				A75CED4C4BBB24779C40E10D /* Pods-Thoughts.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4C20C12891242D00030246 /* TitleTableViewCell.swift in Sources */,
 				CBAFBC112887E8EB005BE118 /* SearchViewController.swift in Sources */,
 				ACE011FB28905761003D8EAD /* TitleCollectionViewCell.swift in Sources */,
 				AC3A984F2885CD0700C8ED6D /* HomeViewController.swift in Sources */,
@@ -308,6 +314,7 @@
 				ACBD1F08288870B900B651E0 /* HeroHeader.swift in Sources */,
 				AC3A984B2885CD0700C8ED6D /* AppDelegate.swift in Sources */,
 				AC3A984D2885CD0700C8ED6D /* SceneDelegate.swift in Sources */,
+				CB4C20C3289127C600030246 /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

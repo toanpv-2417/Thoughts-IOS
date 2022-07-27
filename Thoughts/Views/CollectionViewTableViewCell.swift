@@ -43,6 +43,10 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     public func configure(with titles: [Title]){
         self.titles = titles
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView.reloadData()
+        }
     }
 
 }
@@ -50,14 +54,18 @@ class CollectionViewTableViewCell: UITableViewCell {
 
 extension CollectionViewTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return titles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier, for: indexPath) as? TitleCollectionViewCell  else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = .green
+        
+        if let url = titles[indexPath.row].poster_path {
+            cell.configure(with: url)
+        }
+        
         return cell
     }
     
